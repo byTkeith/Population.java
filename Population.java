@@ -49,9 +49,13 @@ public class Population {
             //now to take the vallues from the map, make them chars then conc
 
             String firstString=map.get(fistMate);//takes the value of mating from the map
+            String SecondString=map.get(SecondMate);//takes the 2nd value for mating
+
+            char[] firstChar=firstString.toCharArray();//char value of the first string
+            cha
 
 
-            System.out.println("the following are matings to occur"+entireFile.get(k));
+            System.out.println("the first mate is: "+firstString);
         }
        
 
