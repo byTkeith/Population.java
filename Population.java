@@ -33,8 +33,12 @@ public class Population {
 
             }
             int numBreeds=Integer.parseInt(entireFile.get(lengthOfPop+1));//the number after the population the signifies the number of matings to occur
-            int matingStartPoint=lengthOfPop+2
+            int matingStartPoint=lengthOfPop+2;//the loop for matings starts here
             System.out.println("The mating starts at: " +matingStartPoint);
+            int k=matingStartPoint;
+            for(k=matingStartPoint;k<entireFile.size();k++){
+                System.out.println("the following are matings to occur"+entireFile.get(k));
+            }
 
 
         }
