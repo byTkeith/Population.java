@@ -23,6 +23,7 @@ public class Population {
             }
         }
         int i=0;
+        int matingStartPoint=0;
         for(i=0;i<entireFile.size();i++){
             int lengthOfPop=Integer.parseInt(entireFile.get(0));
             int wordPos=0;
@@ -33,14 +34,18 @@ public class Population {
 
             }
             int numBreeds=Integer.parseInt(entireFile.get(lengthOfPop+1));//the number after the population the signifies the number of matings to occur
-            int matingStartPoint=lengthOfPop+2;//the loop for matings starts here
-            System.out.println("The mating starts at: " +matingStartPoint);
-            int k=matingStartPoint;
-            for(k=matingStartPoint;k<entireFile.size();k++){
-                System.out.println("the following are matings to occur"+entireFile.get(k));
-            }
+            matingStartPoint=lengthOfPop+2;//the loop for matings starts here
+          
+           
 
 
+        }
+        int k=matingStartPoint;
+        for(k=matingStartPoint;k<entireFile.size();k++){//loop that only goes through the mating pairs
+            String[] splitpairs=entireFile.get(k).split(" ");//splits the mating pairs into two by space
+            
+
+            System.out.println("the following are matings to occur"+entireFile.get(k));
         }
        
 
