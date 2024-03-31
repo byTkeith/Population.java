@@ -26,6 +26,8 @@ public class Population {
         int i=0;
         int wordPos=0;
         int matingStartPoint=0;
+        int firstreduce=0;
+        int secondreduce=0;
         for(i=0;i<entireFile.size();i++){
             int lengthOfPop=Integer.parseInt(entireFile.get(0));
             //int wordPos=0;
@@ -57,17 +59,28 @@ public class Population {
             char[] secondChar=SecondString.toCharArray();//char value of the second string
             StringBuilder sb=new StringBuilder();
 
-            for(int c=0;c<firstChar.length && c<secondChar.length && c<=10;c++){
+            for(int c=0;c<firstChar.length && c<secondChar.length;c++){
+                
                 sb.append(firstChar[c]);//first adds the char of the first mater
+                firstreduce=firstChar.length-1;//after adding char to sb we subtract from the length of the word
                 sb.append(secondChar[c]);// then adds the char of the second mater
+                secondreduce=secondChar.length-1;//subtracst from the maximum length if added
                 //String combined=sb.toString();
                 //wordPos++; too increment the counter of the word an possibly store in the map
+                
                 
 
 
 
             }
             String combinedString=sb.toString();//all the letters combined to a whole letter
+            if(sb.length()<10 && firstreduce>0){
+                for(int l=firstreduce;l<(10-firstreduce);l++ ){
+                    sb.append(firstString.substring(firstreduce,l+1 ));//if there are still letters remaining for the fir
+                }
+
+            }
+            else if
            
             System.out.println("the offspring is : "+combinedString);
             //System.out.println("");
