@@ -43,7 +43,8 @@ public class Population {
         int k=matingStartPoint;
         for(k=matingStartPoint;k<entireFile.size();k++){//loop that only goes through the mating pairs
             String[] splitpairs=entireFile.get(k).split(" ");//splits the mating pairs into two by space
-            
+            int fistMate=Integer.parseInt(splitpairs[0]);//the first value to mate
+            int SecondMate=Integer.parseInt(splitpairs[1]);
 
             System.out.println("the following are matings to occur"+entireFile.get(k));
         }
