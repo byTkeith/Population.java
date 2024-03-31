@@ -28,8 +28,14 @@ public class Population {
             int wordPos=0;
             int j=1;//to start reading the strings after taking the first integer value
             for(j=1;j<lengthOfPop;j++){//loop over only the specified length of population
+                wordPos++;
+                map.put(wordPos, entireFile.get(j));
 
             }
+
+        }
+        for(int s: map.keySet()){
+            System.out.println("the values in the map are:"+s);
 
         }
 
