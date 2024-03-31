@@ -23,21 +23,21 @@ public class Population {
             }
         }
         int i=0;
-        for(i=0;i<entireFile.size()-1;i++){
+        for(i=0;i<entireFile.size();i++){
             int lengthOfPop=Integer.parseInt(entireFile.get(0));
             int wordPos=0;
             int j=1;//to start reading the strings after taking the first integer value
-            for(j=1;j<lengthOfPop;j++){//loop over only the specified length of population
+            for(j=1;j<lengthOfPop+1;j++){//loop over only the specified length of population
                 wordPos++;
                 map.put(wordPos, entireFile.get(j));
 
             }
 
         }
-        for(int s: map.keySet()){
-            System.out.println("the values in the map are:"+s);
+        // for(int s: map.keySet()){
+        //     System.out.println("the values in the map are:"+s+" : "+map.get(s));
 
-        }
+        // }
 
     }
     
