@@ -55,19 +55,22 @@ public class Population {
 
             char[] firstChar=firstString.toCharArray();//char value of the first string
             char[] secondChar=SecondString.toCharArray();//char value of the second string
+            StringBuilder sb=new StringBuilder();
 
             for(int c=0;c<firstChar.length && c<secondChar.length && c<=10;c++){
-                mateLab.add(firstChar[c]);//first adds the char of the first mater
-                mateLab.add(secondChar[c]);// then adds the char of the second mater
+                sb.append(firstChar[c]);//first adds the char of the first mater
+                sb.append(secondChar[c]);// then adds the char of the second mater
+                //String combined=sb.toString();
                 //wordPos++; too increment the counter of the word an possibly store in the map
                 
 
 
 
             }
-            for(Character c: mateLab){
-                System.out.print("the offspring is"+c);
-            }System.out.println();
+            String combinedString=sb.toString();//all the letters combined to a whole letter
+           
+            System.out.println("the offspring is : "+combinedString);
+            //System.out.println("");
 
 
             System.out.println("the first mate is: ");
