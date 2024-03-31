@@ -46,6 +46,11 @@ public class Population {
             int fistMate=Integer.parseInt(splitpairs[0]);//the first value to mate
             int SecondMate=Integer.parseInt(splitpairs[1]);
 
+            //now to take the vallues from the map, make them chars then conc
+
+            String firstString=map.get(fistMate);//takes the value of mating from the map
+
+
             System.out.println("the following are matings to occur"+entireFile.get(k));
         }
        
