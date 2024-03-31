@@ -32,12 +32,13 @@ public class Population {
                 map.put(wordPos, entireFile.get(j));
 
             }
+            int numBreeds=Integer.parseInt(entireFile.get(lengthOfPop+1));//the number after the population the signifies the number of matings to occur
+            int matingStartPoint=lengthOfPop+2
+            System.out.println("The mating starts at: " +matingStartPoint);
+
 
         }
-        // for(int s: map.keySet()){
-        //     System.out.println("the values in the map are:"+s+" : "+map.get(s));
-
-        // }
+       
 
     }
     
