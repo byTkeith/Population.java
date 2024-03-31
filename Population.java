@@ -6,6 +6,7 @@ public class Population {
     public static void main(String[] args) {
         LinkedHashMap<Integer, String> map=new LinkedHashMap<>();//to store the string and the postion number
         ArrayList<String> entireFile=new ArrayList<>();
+        ArrayList<Character> mateLab=new ArrayList<>();
         Scanner scanner =new Scanner(System.in);
         System.out.println("Enter the file name:");
         String filename=scanner.nextLine();
@@ -23,10 +24,11 @@ public class Population {
             }
         }
         int i=0;
+        int wordPos=0;
         int matingStartPoint=0;
         for(i=0;i<entireFile.size();i++){
             int lengthOfPop=Integer.parseInt(entireFile.get(0));
-            int wordPos=0;
+            //int wordPos=0;
             int j=1;//to start reading the strings after taking the first integer value
             for(j=1;j<lengthOfPop+1;j++){//loop over only the specified length of population
                 wordPos++;
@@ -52,10 +54,23 @@ public class Population {
             String SecondString=map.get(SecondMate);//takes the 2nd value for mating
 
             char[] firstChar=firstString.toCharArray();//char value of the first string
-            cha
+            char[] secondChar=SecondString.toCharArray();//char value of the second string
+
+            for(int c=0;c<firstChar.length && c<secondChar.length && c<=10;c++){
+                mateLab.add(firstChar[c]);//first adds the char of the first mater
+                mateLab.add(secondChar[c]);// then adds the char of the second mater
+                //wordPos++; too increment the counter of the word an possibly store in the map
+                
 
 
-            System.out.println("the first mate is: "+firstString);
+
+            }
+            for(Character c: mateLab){
+                System.out.print("the offspring is"+c);
+            }System.out.println();
+
+
+            System.out.println("the first mate is: ");
         }
        
 
