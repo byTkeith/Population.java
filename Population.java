@@ -62,9 +62,9 @@ public class Population {
             for(int c=0;c<firstChar.length && c<secondChar.length;c++){
                 
                 sb.append(firstChar[c]);//first adds the char of the first mater
-                firstreduce=firstChar.length-1;//after adding char to sb we subtract from the length of the word
+                firstreduce++;//after adding char to sb we subtract from the length of the word
                 sb.append(secondChar[c]);// then adds the char of the second mater
-                secondreduce=secondChar.length-1;//subtracst from the maximum length if added
+                secondreduce++;//subtracst from the maximum length if added
                 //String combined=sb.toString();
                 //wordPos++; too increment the counter of the word an possibly store in the map
                 
@@ -73,14 +73,17 @@ public class Population {
 
 
             }
-            String combinedString=sb.toString();//all the letters combined to a whole letter
-            if(sb.length()<10 && firstreduce>0){
-                for(int l=firstreduce;l<(10-firstreduce);l++ ){
-                    sb.append(firstString.substring(firstreduce,l+1 ));//if there are still letters remaining for the fir
-                }
+            //String combinedString=sb.toString();//all the letters combined to a whole letter
+            if(sb.length()<10 && firstreduce!=firstString.length()){
+                
+                sb.append(firstString.substring(firstreduce));//if there are still letters remaining for the fir
+            
 
             }
-            else if
+            else if(sb.length()<10 && secondreduce!=SecondString.length()){
+                sb.append(SecondString.substring(secondreduce));
+            }
+            String combinedString=sb.toString();
            
             System.out.println("the offspring is : "+combinedString);
             //System.out.println("");
