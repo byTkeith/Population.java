@@ -35,6 +35,7 @@ public class Population {
             for(j=1;j<lengthOfPop+1;j++){//loop over only the specified length of population
                 wordPos++;
                 map.put(wordPos, entireFile.get(j));
+                System.out.println("["+map.get(wordPos)+"]");
 
             }
             int numBreeds=Integer.parseInt(entireFile.get(lengthOfPop+1));//the number after the population the signifies the number of matings to occur
