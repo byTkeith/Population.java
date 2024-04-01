@@ -76,20 +76,31 @@ public class Population {
 
             }
             //String combinedString=sb.toString();//all the letters combined to a whole letter
+            int counterF=0;//counters for the amoubnt of string left to reach 10
+            int counterS=0;
             if(sb.length()<10 && firstreduce<firstString.length()){
                 
                 sb.append(firstString.substring(firstreduce));//if there are still letters remaining for the fir
             
 
             }
+            
             else if(sb.length()<10 && secondreduce<SecondString.length()){
                 sb.append(SecondString.substring(secondreduce));
+
             }
             String combinedString=sb.toString();
             wordPos++;//increments the value for position after creatingb the word
             map.put(wordPos, combinedString);//adds the new position number and the new number into the map
+            String purifiedString="";
+            if(combinedString.length()>10){
+                purifiedString=combinedString.substring(0, 9);//if the new string is longer than it should be , will just clip the values to 10 by using substring
+            }
+            else if(combinedString.length()<=10){
+                purifiedString=combinedString;//if the values are within our range then we are all good print the string like that
+            }
            
-            System.out.println("the offspring is : "+combinedString);
+            System.out.println("the offspring is : "+purifiedString);
         
         }
        
