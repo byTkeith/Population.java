@@ -26,9 +26,9 @@ public class Population {
         int i=0;
         int wordPos=0;
         int matingStartPoint=0;
-        int firstreduce=0;
-        int secondreduce=0;
-        for(i=0;i<entireFile.size();i++){
+        // int firstreduce=0;
+        // int secondreduce=0;
+        for(i=0;i!=1;i++){
             int lengthOfPop=Integer.parseInt(entireFile.get(0));
             //int wordPos=0;
             int j=1;//to start reading the strings after taking the first integer value
@@ -58,6 +58,8 @@ public class Population {
             char[] firstChar=firstString.toCharArray();//char value of the first string
             char[] secondChar=SecondString.toCharArray();//char value of the second string
             StringBuilder sb=new StringBuilder();
+            int firstreduce=0;
+            int secondreduce=0;
 
             for(int c=0;c<firstChar.length && c<secondChar.length;c++){
                 
@@ -74,22 +76,21 @@ public class Population {
 
             }
             //String combinedString=sb.toString();//all the letters combined to a whole letter
-            if(sb.length()<10 && firstreduce!=firstString.length()){
+            if(sb.length()<10 && firstreduce<firstString.length()){
                 
                 sb.append(firstString.substring(firstreduce));//if there are still letters remaining for the fir
             
 
             }
-            else if(sb.length()<10 && secondreduce!=SecondString.length()){
+            else if(sb.length()<10 && secondreduce<SecondString.length()){
                 sb.append(SecondString.substring(secondreduce));
             }
             String combinedString=sb.toString();
+            wordPos++;//increments the value for position after creatingb the word
+            map.put(wordPos, combinedString);//adds the new position number and the new number into the map
            
             System.out.println("the offspring is : "+combinedString);
-            //System.out.println("");
-
-
-            System.out.println("the first mate is: ");
+        
         }
        
 
