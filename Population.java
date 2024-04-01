@@ -1,3 +1,8 @@
+/*
+ * Author:Tendai K Nyevedzanai
+ * 
+ * program that mates a population continuously
+ */
 import java.io.*;
 import java.util.*;
 public class Population {
