@@ -94,13 +94,13 @@ public class Population {
             map.put(wordPos, combinedString);//adds the new position number and the new number into the map
             String purifiedString="";
             if(combinedString.length()>10){
-                purifiedString=combinedString.substring(0, 9);//if the new string is longer than it should be , will just clip the values to 10 by using substring
+                purifiedString=combinedString.substring(0, 10);//if the new string is longer than it should be , will just clip the values to 10 by using substring
             }
             else if(combinedString.length()<=10){
                 purifiedString=combinedString;//if the values are within our range then we are all good print the string like that
             }
            
-            System.out.println("the offspring is : "+purifiedString);
+            System.out.println("["+purifiedString+"]");
         
         }
        
